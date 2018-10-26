@@ -9,23 +9,24 @@ let dumb = {
     name: "eoij",
     descriptor: "two"
 }
-let billy = [cool, dumb]
+    let billy= [cool, dumb]
 
 
-function elementfactory(resultsArray) {
-
-    resultsArray.forEach((element) => {
-        let li = document.createElement("li")
-        let saveButton = document.createElement("button")
-        saveButton.setAttribute("class", "saveResult")
-        let buttonText = document.createTextNode("Add to Itin")
-        saveButton.appendChild(buttonText)
-        li.innerHTML = `${ element.name} , ${element.descriptor}`
-        li.appendChild(saveButton)
-        ul.appendChild(li)
-    })
-    console.log(ul)
-    return ul
+function elementfactory(resultsArray, uniqueUL){
+           let ul = document.createElement("ul")
+           ul.setAttribute("class", uniqueUL)
+            resultsArray.forEach((element) => {
+                let li = document.createElement("li")
+                let saveButton= document.createElement("button")
+                saveButton.setAttribute("class", "saveResult")
+                let buttonText = document.createTextNode("Add to Itin")
+                saveButton.appendChild(buttonText)
+                li.innerHTML = `${ element.name} , ${element.descriptor}`
+                li.appendChild(saveButton)
+                ul.appendChild(li)
+ })
+ console.log(ul)
+ return ul
 }
 
 
