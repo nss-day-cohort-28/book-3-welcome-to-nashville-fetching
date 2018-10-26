@@ -6,16 +6,13 @@ const sushi = 171;
 const southern = 471;
 const tapas = 179;
 
-// set URL based on selection value; limit to 5 results
-let url = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=5&cuisines=${tapas}`
-
 // create empty array to hold objects
 const restArray = [];
 
 // create method for fetch
 restaurantAPI = {
-    fetchRestaurants(){
-        return fetch(url, {
+    fetchRestaurants(selection){
+        return fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=5&cuisines=${selection}`, {
             headers: {
                 "user-key": "bb1bc2b85838619af4247cb892fc4e99"
             }
@@ -36,7 +33,8 @@ const restLoop = (array) => {
         elementfactory(restArray, "rest-ul")
     }
 
-// call the function
-restaurantAPI.fetchRestaurants().then((parsed) => {
-    restLoop(parsed)
-})
+const getRestaurants = (selection) => {
+    restaurantAPI.fetchRestaurants(selection).then((parsed) => {
+        restLoop(parsed)
+    })
+}
