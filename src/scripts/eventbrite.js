@@ -10,7 +10,7 @@ let moneyArray = []
         .then((events) => events.json())
         .then((parsedEvents) => {
             eventArray = parsedEvents.events
-            console.log(eventArray)
+  
 
             for (let i = 0; i < eventArray.length; i++) {
                 // If else statement that creates Objects with the Key Components of Name and website addresses for the object, and populates the free and money arrays
@@ -30,12 +30,12 @@ let moneyArray = []
             }
             // Array of events that cost money
             for (i = 0; i < 5; i++) {
-                console.log(moneyArray[i])
+                // console.log(moneyArray[i])
             }
 
             // Array of events that are free
             for (i = 0; i < 5; i++) {
-                console.log(freeArray[i])
+                // console.log(freeArray[i])
             }
 
 

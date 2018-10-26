@@ -32,11 +32,14 @@ const restLoop = (array) => {
             obj.descriptor = element.restaurant.user_rating.aggregate_rating
             restArray.push(obj)
         })
+        return restArray
     }
 
 // call the function
 restaurantAPI.fetchRestaurants().then((parsed) => {
-    restLoop(parsed)
+    restLoop(parsed).then((restArray) => console.log(restArray))
+
 })
+
 
 console.log(restArray);
