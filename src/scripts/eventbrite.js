@@ -1,12 +1,14 @@
 let eventArray = []
 let freeArray = []
 let moneyArray = []
+let shortFree = []
+let shortMoney = []
 
 fetch("https://www.eventbriteapi.com/v3/events/search/?location.address=Nashville&expand=venue&sort_by=date", {
-        headers: {
-            "Authorization": "Bearer NK5HV7ZQC6WOGAYEN7W6"
-        }
-    })
+    headers: {
+        "Authorization": "Bearer NK5HV7ZQC6WOGAYEN7W6"
+    }
+})
     .then((events) => events.json())
     .then((parsedEvents) => {
         eventArray = parsedEvents.events
@@ -30,13 +32,15 @@ fetch("https://www.eventbriteapi.com/v3/events/search/?location.address=Nashvill
         }
         // Array of events that cost money
         for (i = 0; i < 5; i++) {
+            shortMoney.push(moneyArray[i])
             // console.log(moneyArray[i])
         }
 
         // Array of events that are free
         for (i = 0; i < 5; i++) {
+            shortFree.push(freeArray[i])
             // console.log(freeArray[i])
         }
-
-
+        elementfactory(shortFree, "events-ul" )
     })
+
