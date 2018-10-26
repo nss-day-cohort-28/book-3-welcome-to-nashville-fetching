@@ -20,7 +20,6 @@ songkickAPI = {
       .then((resultsObj) => {
         let concertArray = []
         concertArray = resultsObj.resultsPage.results.event
-        // console.table(concertArray)
         return concertArray
       })
   }
@@ -29,7 +28,6 @@ let concertContainer = document.querySelector("#concert-list")
 let eventList=[]
 let showByVenue = (venueID) => {
   songkickAPI.fetchConcerts().then((array) => {
-    // console.log(array[0].venue.id)
     array.forEach((event) => {
       if (event.venue.id === venueID) {
         let eventObj ={}
@@ -45,11 +43,9 @@ let showByVenue = (venueID) => {
 
 // create ul to append
 
-// call my function to run the fetch and then element factory
-showByVenue(795);
 
-// append the result
-concertContainer.appendChild(ul);
+
+
 
 
 
