@@ -1,11 +1,11 @@
 // element factory
 
 
-let cool ={
+let cool = {
     name: "ijo",
     descriptor: "ugly"
 }
-let dumb ={
+let dumb = {
     name: "eoij",
     descriptor: "two"
 }
@@ -36,6 +36,3 @@ function elementfactory(resultsArray, uniqueUL){
 // function initfactory(){
 
 // }
-
-
-

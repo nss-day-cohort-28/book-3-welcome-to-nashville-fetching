@@ -43,9 +43,4 @@ fetch("https://www.eventbriteapi.com/v3/events/search/?location.address=Nashvill
         }
         elementfactory(shortFree, "events-ul" )
     })
-// console.log(shortMoney)
-// console.log(shortFree)
-// let ul = document.createElement("ul")
-// let eventTarget= document.querySelector("event-list")
-// elementfactory(shortFree, "events-ul" )
-// eventTarget.appendChild(ul)
+
