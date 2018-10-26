@@ -12,13 +12,13 @@ h1 {
  text-align: center;
 }
 
-h2 {
+/* h2 {
 
 }
 
 p{
 
-}
+} */
 
 #container {
   display: flex;
@@ -27,7 +27,7 @@ p{
 
 }
 
-#landing {
+/* #landing {
 
 }
 
@@ -37,7 +37,7 @@ p{
 
 .landing-buttons {
 
-}
+} */
 
 .module {
   height: 100vh;
@@ -49,7 +49,7 @@ p{
  background-color: aquamarine;
 }
 
-.itinerary-flex {
+/* .itinerary-flex {
 
 }
 
@@ -59,7 +59,7 @@ p{
 
 .result-list{
 
-}
+} */
 
 #restuarants {
 background-color: blueviolet;
