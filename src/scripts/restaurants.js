@@ -7,7 +7,7 @@ const southern = 471;
 const tapas = 179;
 
 // set URL based on selection value; limit to 5 results
-url = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=5&cuisines=${selection}`
+let url = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=5&cuisines=${tapas}`
 
 // create empty array to hold objects
 const restArray = [];
@@ -29,17 +29,14 @@ const restLoop = (array) => {
         array.restaurants.forEach((element) => {
             let obj = {}
             obj.name = element.restaurant.name
-            obj.descriptor = element.restaurant.user_rating.aggregate_rating
+            obj.descriptor = "average rating " + element.restaurant.user_rating.aggregate_rating
             restArray.push(obj)
         })
-        return restArray
+        // return restArray
+        elementfactory(restArray, "rest-ul")
     }
 
 // call the function
 restaurantAPI.fetchRestaurants().then((parsed) => {
-    restLoop(parsed).then((restArray) => console.log(restArray))
-
+    restLoop(parsed)
 })
-
-
-console.log(restArray);

@@ -12,8 +12,9 @@ let dumb ={
     let billy= [cool, dumb]
 
 
-function elementfactory(resultsArray){
-           
+function elementfactory(resultsArray, uniqueUL){
+           let ul = document.createElement("ul")
+           ul.setAttribute("class", uniqueUL)
             resultsArray.forEach((element) => {
                 let li = document.createElement("li")
                 let saveButton= document.createElement("button")
