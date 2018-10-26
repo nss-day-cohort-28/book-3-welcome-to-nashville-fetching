@@ -25,7 +25,7 @@ songkickAPI = {
       })
   }
 }
-
+let concertContainer = document.querySelector("#concert-list")
 let eventList=[]
 let showByVenue = (venueID) => {
   songkickAPI.fetchConcerts().then((array) => {
@@ -37,9 +37,19 @@ let showByVenue = (venueID) => {
         eventList.push(eventObj)
       }
     })
-    console.log(eventList)
+    // call element factory with the array that I've created but inside my then statement
+    elementfactory(eventList);
   })
 }
 
+// create ul to append
+let ul=  document.createElement("ul")
+ul.setAttribute("class", "concert-ul")
+// call my function to run the fetch and then element factory
 showByVenue(795);
+
+// append the result
+concertContainer.appendChild(ul);
+
+
 
