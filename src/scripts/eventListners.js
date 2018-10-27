@@ -16,8 +16,11 @@ restButton.addEventListener("click", () => {
 })
 
 parksButton.addEventListener("click", () => {
-    console.log (parksDropDown.value)
+    let feature = (parksDropDown.value)
+    console.log(parksDropDown.value)
+    parksApi.fetchParks(feature)
 })
+
 
 eventsButton.addEventListener("click", () => {
     console.log (eventsDropDown.value)
