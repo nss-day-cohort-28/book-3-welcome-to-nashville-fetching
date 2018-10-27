@@ -1,18 +1,6 @@
 // element factory
 
 
-let cool = {
-    name: "ijo",
-    descriptor: "ugly"
-}
-let dumb = {
-    name: "eoij",
-    descriptor: "two"
-}
-    let billy= [cool, dumb]
-
-let restResult;
-
 function elementfactory(resultsArray, uniqueUL){
     let ul = document.createElement("ul")
            ul.setAttribute("class", uniqueUL)
@@ -28,7 +16,7 @@ function elementfactory(resultsArray, uniqueUL){
                 ul.appendChild(li)
  })
  console.log(ul)
- restResult = ul
+ uniqueResult = ul
  return ul
 }
 

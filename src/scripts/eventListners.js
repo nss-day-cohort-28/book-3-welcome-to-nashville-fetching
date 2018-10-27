@@ -11,7 +11,7 @@ let restTarget = document.getElementById("restaurant-list");
 
 restButton.addEventListener("click", () => {
     getRestaurants(restDropDown.value).then(res => {
-        restTarget.append(restResult)
+        restTarget.append(uniqueResult)
     })
 })
 
