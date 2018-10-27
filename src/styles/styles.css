@@ -1,78 +1,87 @@
 * {
-margin: 0px;
-padding: 0px;
-}
-
-header {
-  position: fixed;
-  top: 0px;
-}
-
-h1 {
- text-align: center;
-}
-
-/* h2 {
-
-}
-
-p{
-
-} */
-
-#container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-/* #landing {
-
-}
-
-.landing {
-
-}
-
-.landing-buttons {
-
-} */
-
-.module {
-  height: 100vh;
-  display: flex;
+  margin: 0px;
+  padding: 0px;
+  }
   
-}
-
-#itinerary {
- background-color: aquamarine;
-}
-
-/* .itinerary-flex {
-
-}
-
-.itinerary-list {
-
-}
-
-.result-list{
-
-} */
-
-#restuarants {
-background-color: blueviolet;
-}
-
-#parks {
-background-color: coral;
-}
-
-#events {
-background-color: teal;
-}
-
-#concerts {
-background-color: green;
-}
+  header {
+    text-align: center;
+    top: 0px;
+  }
+  
+  h1 {
+   
+  }
+  
+  h2 {
+  
+  }
+  
+  p{
+  
+  } */
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  #landing {
+  text-align: center;
+  }
+  
+  .landing {
+  
+  }
+  
+  .landing-buttons {
+  
+  } */
+  
+  .module {
+    /* height: 100vh; */
+    display: flex;
+    
+  }
+  
+  #itinerary {
+   background-color: aquamarine;
+   text-align: center;
+  }
+  
+  /* .itinerary-flex {
+  
+  }
+  
+  .itinerary-list {
+  
+  }
+  
+  .result-list{
+  
+  } */
+  
+  #restaurants {
+  background-color: blueviolet;
+  text-align: center;
+  
+  }
+  
+  #parks {
+  background-color: coral;
+  text-align: center;
+  
+  }
+  
+  #events {
+  background-color: teal;
+  text-align: center;
+  
+  }
+  
+  #concerts {
+  background-color: green;
+  text-align: center;
+  
+  }
