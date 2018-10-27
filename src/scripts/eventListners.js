@@ -28,4 +28,6 @@ eventsButton.addEventListener("click", () => {
 
 concertsButton.addEventListener("click", () => {
     console.log (concertsDropDown.value)
+    concertInt = parseInt(concertsDropDown.value)
+    songkickAPI.fetchConcerts(concertInt)
 })
