@@ -8,16 +8,11 @@ const eventsButton= document.getElementById("events-go")
 const concertsButton= document.getElementById("concerts-go")
 
 let restTarget = document.getElementById("restaurant-list");
-// let restResult;
 
 restButton.addEventListener("click", () => {
     getRestaurants(restDropDown.value).then(res => {
-        console.log("inside promise")
-        // restResult = res;
-        console.log("after attempt")
         restTarget.append(restResult)
     })
-    console.log("after promise")
 })
 
 parksButton.addEventListener("click", () => {
