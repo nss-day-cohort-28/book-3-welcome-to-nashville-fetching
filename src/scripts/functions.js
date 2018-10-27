@@ -19,8 +19,9 @@ function elementfactory(resultsArray, uniqueUL){
                 let li = document.createElement("li")
                 let saveButton= document.createElement("button")
                 saveButton.setAttribute("class", "saveResult")
-                let buttonText = document.createTextNode("Add to Itin")
-                saveButton.appendChild(buttonText)
+                saveButton.textContent = "Add to Itin"
+                // let buttonText = document.createTextNode("Add to Itin")
+                // saveButton.appendChild(buttonText)
                 li.innerHTML = `${ element.name} , ${element.descriptor}`
                 li.appendChild(saveButton)
                 ul.appendChild(li)
