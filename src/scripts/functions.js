@@ -11,7 +11,7 @@ let dumb = {
 }
     let billy= [cool, dumb]
 
-
+let restResult;
 function elementfactory(resultsArray, uniqueUL){
            let ul = document.createElement("ul")
            ul.setAttribute("class", uniqueUL)
@@ -27,6 +27,9 @@ function elementfactory(resultsArray, uniqueUL){
                 ul.appendChild(li)
  })
  console.log(ul)
+ // if this stays, will need to put it inside loop to set to zero every time or it will keep adding to the list
+ restResult = "";
+ restResult = ul;
  return ul
 }
 
