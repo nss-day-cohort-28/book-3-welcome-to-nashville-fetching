@@ -7,8 +7,12 @@ const parksButton= document.getElementById("parks-go")
 const eventsButton= document.getElementById("events-go")
 const concertsButton= document.getElementById("concerts-go")
 
+let restTarget = document.getElementById("restaurant-list");
+
 restButton.addEventListener("click", () => {
-    console.log(restDropDown.value)
+    getRestaurants(restDropDown.value).then(res => {
+        restTarget.append(uniqueResult)
+    })
 })
 
 parksButton.addEventListener("click", () => {

@@ -30,11 +30,11 @@ const restLoop = (array) => {
             restArray.push(obj)
         })
         // return restArray
-        elementfactory(restArray, "rest-ul")
+        return elementfactory(restArray, "rest-ul")
     }
 
 const getRestaurants = (selection) => {
-    restaurantAPI.fetchRestaurants(selection).then((parsed) => {
+    return restaurantAPI.fetchRestaurants(selection).then((parsed) => {
         restLoop(parsed)
     })
 }
