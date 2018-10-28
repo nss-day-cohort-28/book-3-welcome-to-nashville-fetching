@@ -23,7 +23,8 @@ parksButton.addEventListener("click", () => {
 
 
 eventsButton.addEventListener("click", () => {
-    console.log (eventsDropDown.value)
+    const eventFilter = document.querySelector("#events-dropdown").value
+    eventsApi.fetchEvents(eventFilter)
 })
 
 concertsButton.addEventListener("click", () => {
@@ -63,7 +64,7 @@ restTarget.addEventListener("click", (event) => {
 // if we agree on this method, we'll need to remove button creation from element factory
 // but this cleans up the text so we can get it over to JSON
 restTarget.addEventListener("click", (event) => {
-    if (event.target && event.target.nodeName == "LI") {
+    if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
     }
 })

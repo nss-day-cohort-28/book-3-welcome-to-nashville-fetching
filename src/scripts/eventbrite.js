@@ -5,16 +5,15 @@ let shortFree = []
 let shortMoney = []
 
 eventsApi = {
-    fetchEvents(shortArray) {
+    fetchEvents(eventFilter) {
         fetch("https://www.eventbriteapi.com/v3/events/search/?location.address=Nashville&expand=venue&sort_by=date", {
             headers: {
                 "Authorization": "Bearer NK5HV7ZQC6WOGAYEN7W6"
             }
         })
-            .then((events) => events.json())
+            .then((events) => { console.log(events);events.json()})
             .then((parsedEvents) => {
                 eventArray = parsedEvents.events
-
 
                 for (let i = 0; i < eventArray.length; i++) {
                     // If else statement that creates Objects with the Key Components of Name and website addresses for the object, and populates the free and money arrays
@@ -43,7 +42,14 @@ eventsApi = {
                     shortFree.push(freeArray[i])
                     // console.log(freeArray[i])
                 }
-                elementfactory(shortArray, "events-ul")
+               
+                let uniqueUl;
+                if (eventFilter === "shortMoney") {
+                    uniqueUl = elementfactory(shortMoney, "event-ul");
+                } else {
+                    uniqueUl = elementfactory(shortFree, "event-ul");
+                }
+                document.querySelector("#event-list").appendChild(uniqueUl)
             })
     }
 }
