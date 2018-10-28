@@ -7,7 +7,7 @@ const southern = 471;
 const tapas = 179;
 
 // create empty array to hold objects
-const restArray = [];
+let restArray = [];
 
 // create method for fetch
 restaurantAPI = {
@@ -23,6 +23,8 @@ restaurantAPI = {
 
 // loops over returned array and creates object
 const restLoop = (array) => {
+    // adding a line here to zero out restArray
+    restArray = [];
         array.restaurants.forEach((element) => {
             let obj = {}
             obj.name = element.restaurant.name
