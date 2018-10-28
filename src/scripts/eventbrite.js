@@ -11,7 +11,7 @@ eventsApi = {
                 "Authorization": "Bearer NK5HV7ZQC6WOGAYEN7W6"
             }
         })
-            .then((events) => { console.log(events);events.json()})
+            .then((events) => events.json())
             .then((parsedEvents) => {
                 eventArray = parsedEvents.events
 
