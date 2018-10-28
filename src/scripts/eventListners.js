@@ -7,12 +7,12 @@ const parksButton= document.getElementById("parks-go")
 const eventsButton= document.getElementById("events-go")
 const concertsButton= document.getElementById("concerts-go")
 
-let restTarget = document.getElementById("restaurant-list");
+const restTarget = document.getElementById("restaurant-list");
 
 restButton.addEventListener("click", () => {
+    clearFunction(restTarget)
     getRestaurants(restDropDown.value).then(res => {
-        restTarget.append(uniqueResult)
-    })
+        restTarget.append(uniqueResult)})
 })
 
 parksButton.addEventListener("click", () => {
@@ -30,4 +30,40 @@ concertsButton.addEventListener("click", () => {
     console.log (concertsDropDown.value)
     concertInt = parseInt(concertsDropDown.value)
     songkickAPI.fetchConcerts(concertInt)
+})
+
+// function that clears innerHTML of each result div
+// accepts div to clear as argument so we can all use this function
+const clearFunction = (divToClear) => {
+    divToClear.innerHTML = ""
+}
+
+// target generate itinerary button
+genItin = document.getElementById("generate-itinerary")
+
+// add event listener to generate itinerary button
+genItin.addEventListener("click", () => {
+    console.log("generate itin button clicked")
+    // needed here:
+    // create element from itin (store it in database.json)
+    // then append to DOM
+})
+
+/*
+// target restaurant list
+restTarget.addEventListener("click", (event) => {
+    // just to show what is being clicked
+    // need a way to get out the text content of the button, but this is most of the way there
+    console.log(event.target.parentNode.innerText)
+})
+*/
+
+// target restaurant list V2 - better version
+// this will allow us to place EL on the whole UL
+// if we agree on this method, we'll need to remove button creation from element factory
+// but this cleans up the text so we can get it over to JSON
+restTarget.addEventListener("click", (event) => {
+    if (event.target && event.target.nodeName == "LI") {
+        console.log(event.target.innerText)
+    }
 })

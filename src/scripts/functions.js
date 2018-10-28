@@ -11,11 +11,11 @@ function elementfactory(resultsArray, uniqueUL){
                 saveButton.textContent = "Add to Itin"
                 // let buttonText = document.createTextNode("Add to Itin")
                 // saveButton.appendChild(buttonText)
-                li.innerHTML = `${ element.name} , ${element.descriptor}`
+                li.innerHTML = `${element.name}, ${element.descriptor}`
                 li.appendChild(saveButton)
                 ul.appendChild(li)
  })
- console.log(ul)
+//  console.log(ul)
  uniqueResult = ul
  return ul
 }
