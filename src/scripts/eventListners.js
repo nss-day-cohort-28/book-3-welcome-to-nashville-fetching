@@ -27,7 +27,7 @@ eventsButton.addEventListener("click", () => {
 })
 
 concertsButton.addEventListener("click", () => {
-    console.log (concertsDropDown.value)
+    clearFunction(concertContainer)
     concertInt = parseInt(concertsDropDown.value)
     songkickAPI.fetchConcerts(concertInt)
 })

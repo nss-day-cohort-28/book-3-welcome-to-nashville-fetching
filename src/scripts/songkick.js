@@ -23,6 +23,7 @@ songkickAPI = {
       return concertArray = resultsObj.resultsPage.results.event
     })
     .then((concertVenueArray) => {
+      eventList = []
       concertVenueArray.forEach((event) => {
         if (event.venue.id === venueID) {
           let eventObj ={}
