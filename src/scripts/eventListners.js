@@ -20,26 +20,30 @@ const itineraryResults = document.querySelector(".itinerary-list")
 
 
 restButton.addEventListener("click", () => {
+    saveButton.classList.remove("hidden")
     clearFunction(restTarget)
     getRestaurants(restDropDown.value).then(res => {
-        restTarget.append(uniqueResult)})
-})
-
-parksButton.addEventListener("click", () => {
+      restTarget.append(uniqueResult)})
+    })
+    
+  parksButton.addEventListener("click", () => {
+    saveButton.classList.remove("hidden")
     clearFunction(parkContainer)
     let feature = (parksDropDown.value)
     console.log(parksDropDown.value)
     parksApi.fetchParks(feature)
-})
-
-
-eventsButton.addEventListener("click", () => {
+  })
+  
+  
+  eventsButton.addEventListener("click", () => {
+    saveButton.classList.remove("hidden")
     clearFunction(eventContainer)
     const eventFilter = document.querySelector("#events-dropdown").value
     eventsApi.fetchEvents(eventFilter)
-})
-
-concertsButton.addEventListener("click", () => {
+  })
+  
+  concertsButton.addEventListener("click", () => {
+    saveButton.classList.remove("hidden")
     clearFunction(concertContainer)
     concertInt = parseInt(concertsDropDown.value)
     songkickAPI.fetchConcerts(concertInt)
