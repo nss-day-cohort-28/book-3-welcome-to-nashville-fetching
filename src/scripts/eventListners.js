@@ -102,6 +102,7 @@ parkContainer.addEventListener("click", (event) => {
 //  save itinerary button
 
 saveButton.addEventListener("click", (event) => {
+    retrieveItineraryButton.classList.remove("hidden")
     createObjectPost(parksItineraryResults.innerText, restItineraryResults.innerText, eventsItineraryResults.innerText, concertsItineraryResults.innerText )
     itineraryResults.innerHTML = ""
     savedAlert()
