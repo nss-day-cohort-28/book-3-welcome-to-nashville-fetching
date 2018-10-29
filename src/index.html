@@ -15,22 +15,24 @@
   <header>
     <h1>Nashville iTennerary</h1>
   </header>
-
+  
   <div id="container">
-
+    
     <section id="landing" class="module">
-      <h2>Welcome</h2>
-      <p>Filler how to</p>
-      <div class="landing-buttons">
-        <button>Restaurants</button>
-        <button>Parks</button>
-        <button>Events</button>
-        <button>Concerts</button>
+      <div class="landing-container module-container">
+        <h2>Welcome to Nashville!</h2>
+        <p>To begin planning your itinerary, select a category below to search for activities you might be interested in.</p>
+        <div class="landing-buttons">
+          <a href="#restaurants"><button>Restaurants</button></a>
+          <a href="#parks"><button>Parks</button></a>
+          <a href="#events"><button>Events</button></a>
+          <a href="#concerts"><button>Concerts</button></a>
+        </div>
       </div>
     </section>
 
     <section id="itinerary" class="module">
-      <div class="itinerary-flex">
+      <div class="itinerary-container module-container">
         <h2>Your itinerary</h2>
         <div class="itinerary-list">
           <ul></ul>
@@ -40,57 +42,64 @@
     </section>
 
     <section id="restaurants" class="module">
-      <h2>Restaurants</h2>
-      <label for="restaurant-dropdown">Choose a restaurant from these categories:</label>
-      <select name="restaurant-dropdown" id="restaurant-dropdown">
-        <option value="1">American</option>
-        <option value="193">BBQ</option>
-        <option value="161">Coffee</option>
-        <option value="171">Sushi</option>
-        <option value="471">Southern</option>
-        <option value="179">Tapas</option>
-      </select>
-      <button id="restaurants-go">Go</button>
-      <div id="restaurant-list" class="result-list"></div>
+      <div class="module-container restaurant-container">
+        <h2>Restaurants</h2>
+        <label for="restaurant-dropdown">Choose a restaurant from these categories:</label>
+        <select name="restaurant-dropdown" id="restaurant-dropdown">
+          <option value="1">American</option>
+          <option value="193">BBQ</option>
+          <option value="161">Coffee</option>
+          <option value="171">Sushi</option>
+          <option value="471">Southern</option>
+          <option value="179">Tapas</option>
+        </select>
+        <button id="restaurants-go">Go</button>
+        <div id="restaurant-list" class="result-list"></div>
+      </div>
     </section>
 
-    <section id= "parks" class="module">
-      <h2>Parks</h2>
-      <label for="parks-dropdown">See a list of parks with these features:</label>
-      <select name="parks-dropdown" id="parks-dropdown">
-        <option value="nature_center=Yes">Nature Center</option>
-        <option value="playground=Yes">Playgrounds</option>
-        <option value="tennis_courts=Yes">Tennis Courts</option>
-        <option value="dog_park=Yes">Dog Parks</option>
-      </select>
-      <button id="parks-go">Go</button>
-      <div id="park-list" class="result-list"></div>
+    <section id="parks" class="module">
+      <div class="module-container parks-container">
+        <h2>Parks</h2>
+        <label for="parks-dropdown">See a list of parks with these features:</label>
+        <select name="parks-dropdown" id="parks-dropdown">
+          <option value="nature_center=Yes">Nature Center</option>
+          <option value="playground=Yes">Playgrounds</option>
+          <option value="tennis_courts=Yes">Tennis Courts</option>
+          <option value="dog_park=Yes">Dog Parks</option>
+        </select>
+        <button id="parks-go">Go</button>
+        <div id="park-list" class="result-list"></div>
+      </div>
     </section>
 
     <section id="events" class="module">
-      <h2>Events</h2>
-      <label for="events-dropdown">See a list of events by option:</label>
-      <select name="events-dropdown" id="events-dropdown">
-        <option value="">Free</option>
-        <option value="">Paid</option>
-        
-      </select>
-      <button id="events-go">Go</button>
-      <div id="event-list" class="result-list"></div>
+      <div class="module-container events-container">
+        <h2>Events</h2>
+        <label for="events-dropdown">See a list of events by option:</label>
+        <select name="events-dropdown" id="events-dropdown">
+          <option value="">Free</option>
+          <option value="">Paid</option>
+
+        </select>
+        <button id="events-go">Go</button>
+        <div id="event-list" class="result-list"></div>
     </section>
 
     <section id="concerts" class="module">
+      <div class="concerts-container module-container">
       <h2>Concerts</h2>
-      <label for="concerts-dropdown">See a list of concerts by venue:</label>
-      <select name="concerts-dropdown" id="concerts-dropdown">
-        <option value="795">Ryman Auditorium</option>
-        <option value="1519393">Marathon Music Works</option>
-        <option value="292">Mercy Lounge</option>
-        <option value="2913113">The Basement East</option>
-        <option value="35919">Exit/In</option>
-      </select>
-      <button id="concerts-go">Go</button>
-      <div id="concert-list" class="result-list"></div>
+        <label for="concerts-dropdown">See a list of concerts by venue:</label>
+        <select name="concerts-dropdown" id="concerts-dropdown">
+          <option value="795">Ryman Auditorium</option>
+          <option value="1519393">Marathon Music Works</option>
+          <option value="292">Mercy Lounge</option>
+          <option value="2913113">The Basement East</option>
+          <option value="35919">Exit/In</option>
+        </select>
+        <button id="concerts-go">Go</button>
+        <div id="concert-list" class="result-list"></div>
+     </div>
       <button id="generate-itinerary">Generate Itinerary</button>
     </section>
 
