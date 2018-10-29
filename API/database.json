@@ -1,10 +1,10 @@
 {
   "itinerary": [
     {
-      "park": "warner",
-      "restaurant": "nama",
-      "event": "costly",
-      "concert": "Jason Isbell",
+      "park": "Park: Shelby Bottoms Park, 1900 Davidson Street Nashville, TN",
+      "restaurant": "Restaurant: Fido, average rating 4.7",
+      "event": "Event: Criminal Justice Reform, https://www.eventbrite.com/e/criminal-justice-reform-tickets-50875730680?aff=ebapi",
+      "concert": "Concert: Boz Scaggs at Ryman Auditorium (October 29, 2018), Go To Concert Info",
       "id": 1
     }
   ]
