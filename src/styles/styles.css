@@ -98,7 +98,7 @@ button {
 .module-container {
   background-color: rgb(224, 98, 98, .85);
   width: 80vw;
-  height: 60vw;
+  height: 60vh;
   border-radius: 15px;
 }
 li.events-container {
@@ -126,17 +126,12 @@ li.events-container {
   text-align: center;
 }
 
-/* .itinerary-flex {
-  
-  }
-  
-  .itinerary-list {
-  
-  }
-  
-  .result-list{
-  
-  } */
+.header-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
 
 #restaurants {
   padding: 10px;
