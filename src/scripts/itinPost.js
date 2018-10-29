@@ -3,8 +3,8 @@
 
 const itin = {
   postActivity (activityToSave) {
-    fetch("http://localhost:8088/itinerary", {
-      method: "POST",
+    fetch("http://localhost:8088/itinerary/1", {
+      method: "PUT",
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json"
@@ -15,9 +15,11 @@ const itin = {
 }
 
 //  function that accepts the name and descriptor as arguments and posts the by calling the itin method.
-createObjectPost = (name, descriptor) => {
-  let activityObj = {}
-    activityObj.name = name
-    activityObj.descriptor = descriptor
-  itin.postActivity(activityObj)
+createObjectPost = (park, restaurant, event, concert) => {
+  let itinObj = {}
+    itinObj.park = park
+    itinObj.restaurant = restaurant
+    itinObj.event = event
+    itinObj.concert = concert
+  itin.postActivity(itinObj)
 }
