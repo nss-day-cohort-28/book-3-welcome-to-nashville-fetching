@@ -11,7 +11,25 @@ body {
   background-color: rgb(6,66,172)
 }
 
+ul {
+  list-style: none;
+}
+li {
+  animation-duration: 200ms;
+  margin: 10px 0 10px 0;
+}
+
+li:hover {
+  transform: scale(1.2);
+  color: rgb(107, 35, 35);
+  animation-duration: 400ms;
+  cursor: pointer;
+}
+
 header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   position: fixed;
   text-align: center;
   top: 0px;
@@ -27,9 +45,12 @@ h1 {
 
 h2 {
   margin: 10px;
+  color:rgb(107, 35, 35);
+  text-decoration: underline;
 }
 p {
   margin: 5px;
+  color:rgb(107, 35, 35);
 }
 button {
   padding: 5px;
@@ -76,9 +97,13 @@ button {
 
 .module-container {
   background-color: rgb(224, 98, 98, .85);
-  width: 60vw;
-  height: 40vw;
+  width: 80vw;
+  height: 60vw;
   border-radius: 15px;
+}
+li.events-container {
+  font-size: 14px;
+  max-width: 70vw;
 }
 
 .landing {
