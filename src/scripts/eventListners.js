@@ -48,24 +48,8 @@ const clearFunction = (divToClear) => {
     divToClear.innerHTML = ""
 }
 
-// target generate itinerary button
-genItin = document.getElementById("generate-itinerary")
 
-// add event listener to generate itinerary button
-genItin.addEventListener("click", () => {
 
-    console.log("generate itin button clicked")
-    // needed here:
-    // create element from itin (store it in database.json)
-    // then append to DOM
-})
-
-// Restaurant selection
-restTarget.addEventListener("click", (event) => {
-    if (event.target && event.target.nodeName === "LI") {
-        console.log(event.target.innerText)
-    }
-})
 
 // Park selection
 parkContainer.addEventListener("click", (event) => {
