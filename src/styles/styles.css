@@ -8,7 +8,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: rgb(6,66,172)
+  background-color: rgb(6,66,172);
+  font-family:"Rosario", "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
 
 ul {
