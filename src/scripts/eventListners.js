@@ -62,6 +62,8 @@ parkContainer.addEventListener("click", (event) => {
         parksItineraryResults.append(`Park: ${event.target.innerText}`)
     
     }
+    // fire success message
+    successAlert("park-success")
  })
 
  // Event selection
@@ -70,8 +72,8 @@ parkContainer.addEventListener("click", (event) => {
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
         eventsItineraryResults.append(`Event: ${event.target.innerText}`)
-    
     }
+    successAlert("event-success")
  })
 
  // Concerts selection
@@ -81,6 +83,7 @@ parkContainer.addEventListener("click", (event) => {
         console.log(event.target.innerText)
         concertsItineraryResults.append(`Concert: ${event.target.innerText}`)
     }
+    successAlert("concert-success")
  })
 
  // Resturants selection
@@ -90,6 +93,7 @@ parkContainer.addEventListener("click", (event) => {
         console.log(event.target.innerText)
         restItineraryResults.append(`Restaurant: ${event.target.innerText}`)
     }
+    successAlert("rest-success")
  })
 
 //  save itinerary button
@@ -97,6 +101,7 @@ parkContainer.addEventListener("click", (event) => {
 saveButton.addEventListener("click", (event) => {
     createObjectPost(parksItineraryResults.innerText, restItineraryResults.innerText, eventsItineraryResults.innerText, concertsItineraryResults.innerText )
     itineraryResults.innerHTML = ""
+    savedAlert()
 })
 
  
