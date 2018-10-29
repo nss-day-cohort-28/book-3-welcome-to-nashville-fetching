@@ -12,7 +12,7 @@ const showWeather = (weatherInfo) => {
 
 // fetch call to OpenWeatherAPI
 const searchWeather = () => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?zip=37205,us&units=imperial&appid=d49085c89869f6ec158d05b5daeea45a`)
+    fetch("http://api.openweathermap.org/data/2.5/weather?zip=37205,us&units=imperial&appid=d49085c89869f6ec158d05b5daeea45a")
     .then(result => {
         return result.json();
     })
