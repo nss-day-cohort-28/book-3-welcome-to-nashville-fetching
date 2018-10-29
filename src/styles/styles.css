@@ -49,6 +49,9 @@ h2 {
   color:rgb(107, 35, 35);
   text-decoration: underline;
 }
+.landing-title {
+  font-size: 42px;
+}
 p {
   margin: 5px;
   color:rgb(107, 35, 35);
@@ -149,4 +152,9 @@ li.events-container {
   background-color: black;
   text-align: center;
 
+}
+
+#weather-result {
+  border: 2px solid white;
+  border-radius: 15px;
 }
