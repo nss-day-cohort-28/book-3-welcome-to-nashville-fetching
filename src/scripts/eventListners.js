@@ -56,19 +56,7 @@ genItin.addEventListener("click", () => {
     // then append to DOM
 })
 
-/*
-// target restaurant list
-restTarget.addEventListener("click", (event) => {
-    // just to show what is being clicked
-    // need a way to get out the text content of the button, but this is most of the way there
-    console.log(event.target.parentNode.innerText)
-})
-*/
-
-// target restaurant list V2 - better version
-// this will allow us to place EL on the whole UL
-// if we agree on this method, we'll need to remove button creation from element factory
-// but this cleans up the text so we can get it over to JSON
+// Restaurant selection
 restTarget.addEventListener("click", (event) => {
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
@@ -76,12 +64,25 @@ restTarget.addEventListener("click", (event) => {
 })
 
 // Park selection
-
 parkContainer.addEventListener("click", (event) => {
     let br = document.createElement("br")
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
         itineraryResults.append(`Park: ${event.target.innerText}`)
         itineraryResults.appendChild(br)
+    }
+ })
+
+ // Event selection
+ eventContainer.addEventListener("click", (event) => {
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
+    }
+ })
+
+ // Concerts selection
+ concertContainer.addEventListener("click", (event) => {
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
     }
  })
