@@ -10,7 +10,10 @@ const concertsButton= document.getElementById("concerts-go")
 const restTarget = document.getElementById("restaurant-list");
 const parkContainer = document.querySelector("#park-list")
 const eventContainer= document.querySelector("#event-list")
-const itineraryResults = document.querySelector(".itinerary-list")
+const parksItineraryResults = document.querySelector(".parkItin")
+const eventsItineraryResults= document.querySelector(".eventsItin")
+const concertsItineraryResults= document.querySelector(".concertsItin")
+const restItineraryResults= document.querySelector(".restItin")
 
 
 restButton.addEventListener("click", () => {
@@ -50,6 +53,7 @@ genItin = document.getElementById("generate-itinerary")
 
 // add event listener to generate itinerary button
 genItin.addEventListener("click", () => {
+
     console.log("generate itin button clicked")
     // needed here:
     // create element from itin (store it in database.json)
@@ -65,24 +69,38 @@ restTarget.addEventListener("click", (event) => {
 
 // Park selection
 parkContainer.addEventListener("click", (event) => {
-    let br = document.createElement("br")
+    parksItineraryResults.innerHTML= ""
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
-        itineraryResults.append(`Park: ${event.target.innerText}`)
-        itineraryResults.appendChild(br)
+        parksItineraryResults.append(`Park: ${event.target.innerText}`)
+    
     }
  })
 
  // Event selection
  eventContainer.addEventListener("click", (event) => {
+    eventsItineraryResults.innerHTML= ""
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
+        eventsItineraryResults.append(`Event: ${event.target.innerText}`)
+    
     }
  })
 
  // Concerts selection
  concertContainer.addEventListener("click", (event) => {
+    concertsItineraryResults.innerHTML= ""
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
+        concertsItineraryResults.append(`Concert: ${event.target.innerText}`)
+    }
+ })
+
+ // Resturants selection
+ restTarget.addEventListener("click", (event) => {
+    restItineraryResults.innerHTML= ""
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
+        restItineraryResults.append(`Restaurant: ${event.target.innerText}`)
     }
  })
