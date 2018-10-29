@@ -35,16 +35,10 @@
         </div>
       </div>
     </section>
-    
+
     <section id="itinerary" class="module">
       <div class="itinerary-container module-container">
-        <div class="header-flex">
-          <a href="#restaurants"><button>Restaurants</button></a>
-          <a href="#parks"><button>Parks</button></a>
-          <h2>Your itinerary</h2>
-          <a href="#events"><button>Events</button></a>
-          <a href="#concerts"><button>Concerts</button></a>
-        </div>
+        <h2>Your itinerary</h2>
         <div class="itinerary-list">
           <ul>
             <li class= "restItin"></li>
@@ -55,6 +49,7 @@
         </div>
         <button class="itinerary-button hidden">Save</button>
         <div id="save-success" class="save-success"></div>
+        <button class= "retrieveItinerary">Your iTennerary</button>
       </div>
     </section>
 
@@ -68,6 +63,7 @@
             <a href="#concerts"><button>Concerts</button></a>
           </div>
         <div id="rest-success" class="success-msg"></div>  
+        <h2>Restaurants</h2>
         <label for="restaurant-dropdown">Choose a restaurant from these categories:</label>
         <select name="restaurant-dropdown" id="restaurant-dropdown">
           <option value="1">American</option>
@@ -93,6 +89,7 @@
               <a href="#concerts"><button>Concerts</button></a>
             </div>
             <div id="park-success" class="success-msg"></div> 
+        <h2>Parks</h2>
         <label for="parks-dropdown">See a list of parks with these features:</label>
         <select name="parks-dropdown" id="parks-dropdown">
           <option value="nature_center=Yes">Nature Center</option>
@@ -116,6 +113,7 @@
             <a href="#concerts"><button>Concerts</button></a>
           </div>
         <div id="event-success" class="success-msg"></div>   
+        <h2>Events</h2>
         <label for="events-dropdown">See a list of events by option:</label>
         <select name="events-dropdown" id="events-dropdown">
           <option value="shortFree">Free</option>
@@ -138,6 +136,8 @@
           </div>
           <div id="concert-success" class="success-msg"></div> 
           <label for="concerts-dropdown">See a list of concerts by venue:</label>
+      <h2>Concerts</h2>
+        <label for="concerts-dropdown">See a list of concerts by venue:</label>
         <select name="concerts-dropdown" id="concerts-dropdown">
           <option value="795">Ryman Auditorium</option>
           <option value="1519393">Marathon Music Works</option>
@@ -160,6 +160,7 @@
   <script src="scripts/parks.js"></script>
   <script src="scripts/songkick.js"></script>
   <script src="scripts/weather.js"></script>
+  <script src="scripts/Itinerary.js"></script>
   <script src="scripts/eventListners.js"></script>
 
 </body>
