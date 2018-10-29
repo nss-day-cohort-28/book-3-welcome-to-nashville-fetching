@@ -35,7 +35,12 @@
       <div class="itinerary-container module-container">
         <h2>Your itinerary</h2>
         <div class="itinerary-list">
-          <ul></ul>
+          <ul>
+            <li class= "restItin"></li>
+            <li class="parkItin"></li>
+            <li class= "eventsItin"></li>
+            <li class= "concertsItin"></li>
+          </ul>
         </div>
         <button>Save</button>
       </div>
@@ -78,8 +83,8 @@
         <h2>Events</h2>
         <label for="events-dropdown">See a list of events by option:</label>
         <select name="events-dropdown" id="events-dropdown">
-          <option value="">Free</option>
-          <option value="">Paid</option>
+          <option value="shortFree">Free</option>
+          <option value="shortMoney">Paid</option>
 
         </select>
         <button id="events-go">Go</button>
@@ -106,6 +111,7 @@
 
   </div>
   <script src="scripts/functions.js"></script>
+  <script src="scripts/itinPost.js"></script>
   <script src="scripts/eventbrite.js"></script>
   <script src="scripts/restaurants.js"></script>
   <script src="scripts/parks.js"></script>
