@@ -15,6 +15,9 @@ const eventsItineraryResults= document.querySelector(".eventsItin")
 const concertsItineraryResults= document.querySelector(".concertsItin")
 const restItineraryResults= document.querySelector(".restItin")
 
+const saveButton = document.querySelector(".itinerary-button")
+const itineraryResults = document.querySelector(".itinerary-list")
+
 
 restButton.addEventListener("click", () => {
     clearFunction(restTarget)
@@ -88,3 +91,13 @@ parkContainer.addEventListener("click", (event) => {
         restItineraryResults.append(`Restaurant: ${event.target.innerText}`)
     }
  })
+
+//  save itinerary button
+
+saveButton.addEventListener("click", (event) => {
+    createObjectPost(parksItineraryResults.innerText, restItineraryResults.innerText, eventsItineraryResults.innerText, concertsItineraryResults.innerText )
+    itineraryResults.innerHTML = ""
+})
+
+ 
+
