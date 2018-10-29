@@ -19,10 +19,6 @@ function elementfactory(resultsArray, uniqueUL){
  uniqueResult = ul
  return ul
 }
-
-
-
-
 // // intin factory
 // function initfactory(){
 
