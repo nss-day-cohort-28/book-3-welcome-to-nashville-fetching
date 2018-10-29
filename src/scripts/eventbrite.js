@@ -58,8 +58,3 @@ eventsApi = {
             })
     }
 }
-
-
-
-
-// function to clear the Arrays that I for each load
