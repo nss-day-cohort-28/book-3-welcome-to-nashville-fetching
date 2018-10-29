@@ -14,10 +14,9 @@ const parksItineraryResults = document.querySelector(".parkItin")
 const eventsItineraryResults= document.querySelector(".eventsItin")
 const concertsItineraryResults= document.querySelector(".concertsItin")
 const restItineraryResults= document.querySelector(".restItin")
-
+const retrieveItineraryButton= document.querySelector(".retrieveItinerary")
 const saveButton = document.querySelector(".itinerary-button")
 const itineraryResults = document.querySelector(".itinerary-list")
-
 
 restButton.addEventListener("click", () => {
     clearFunction(restTarget)
@@ -104,5 +103,8 @@ saveButton.addEventListener("click", (event) => {
     savedAlert()
 })
 
+// Itenerary callback button
+retrieveItineraryButton.addEventListener("click", (event) =>{
+    Getitin.postActivity()
+})
  
-
