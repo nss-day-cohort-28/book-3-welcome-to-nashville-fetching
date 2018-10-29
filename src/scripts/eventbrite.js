@@ -20,12 +20,12 @@ eventsApi = {
                     if (eventArray[i].is_free) {
                         let obj = {}
                         obj.name = (eventArray[i].name.text)
-                        obj.descriptor = (eventArray[i].url)
+                        obj.descriptor = `<a href=${eventArray[i].url}> Eventbrite info page</a>`
                         freeArray.push(obj)
                     } else {
                         let obj = {}
                         obj.name = (eventArray[i].name.text)
-                        obj.descriptor = (eventArray[i].url)
+                        obj.descriptor = `<a href=${eventArray[i].url}> Eventbrite info page</a>`
                         moneyArray.push(obj)
 
                     }
