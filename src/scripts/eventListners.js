@@ -9,8 +9,11 @@ const concertsButton= document.getElementById("concerts-go")
 
 const restTarget = document.getElementById("restaurant-list");
 const parkContainer = document.querySelector("#park-list")
-
-const itineraryResults = document.querySelector(".itinerary-list")
+const eventContainer= document.querySelector("#event-list")
+const parksItineraryResults = document.querySelector(".parkItin")
+const eventsItineraryResults= document.querySelector(".eventsItin")
+const concertsItineraryResults= document.querySelector(".concertsItin")
+const restItineraryResults= document.querySelector(".restItin")
 
 
 restButton.addEventListener("click", () => {
@@ -28,7 +31,9 @@ parksButton.addEventListener("click", () => {
 
 
 eventsButton.addEventListener("click", () => {
-    console.log (eventsDropDown.value)
+    clearFunction(eventContainer)
+    const eventFilter = document.querySelector("#events-dropdown").value
+    eventsApi.fetchEvents(eventFilter)
 })
 
 concertsButton.addEventListener("click", () => {
@@ -48,39 +53,54 @@ genItin = document.getElementById("generate-itinerary")
 
 // add event listener to generate itinerary button
 genItin.addEventListener("click", () => {
+
     console.log("generate itin button clicked")
     // needed here:
     // create element from itin (store it in database.json)
     // then append to DOM
 })
 
-/*
-// target restaurant list
+// Restaurant selection
 restTarget.addEventListener("click", (event) => {
-    // just to show what is being clicked
-    // need a way to get out the text content of the button, but this is most of the way there
-    console.log(event.target.parentNode.innerText)
-})
-*/
-
-// target restaurant list V2 - better version
-// this will allow us to place EL on the whole UL
-// if we agree on this method, we'll need to remove button creation from element factory
-// but this cleans up the text so we can get it over to JSON
-restTarget.addEventListener("click", (event) => {
-    if (event.target && event.target.nodeName == "LI") {
+    if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
     }
 })
 
 // Park selection
-
 parkContainer.addEventListener("click", (event) => {
-    let br = document.createElement("br")
+    parksItineraryResults.innerHTML= ""
     if (event.target && event.target.nodeName === "LI") {
         console.log(event.target.innerText)
-        itineraryResults.append(`Park: ${event.target.innerText}`)
-        itineraryResults.appendChild(br)
+        parksItineraryResults.append(`Park: ${event.target.innerText}`)
+    
     }
  })
- 
+
+ // Event selection
+ eventContainer.addEventListener("click", (event) => {
+    eventsItineraryResults.innerHTML= ""
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
+        eventsItineraryResults.append(`Event: ${event.target.innerText}`)
+    
+    }
+ })
+
+ // Concerts selection
+ concertContainer.addEventListener("click", (event) => {
+    concertsItineraryResults.innerHTML= ""
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
+        concertsItineraryResults.append(`Concert: ${event.target.innerText}`)
+    }
+ })
+
+ // Resturants selection
+ restTarget.addEventListener("click", (event) => {
+    restItineraryResults.innerHTML= ""
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
+        restItineraryResults.append(`Restaurant: ${event.target.innerText}`)
+    }
+ })
