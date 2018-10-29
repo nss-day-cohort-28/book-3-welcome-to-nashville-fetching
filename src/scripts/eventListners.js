@@ -83,4 +83,3 @@ parkContainer.addEventListener("click", (event) => {
         itineraryResults.appendChild(br)
     }
  })
- 
