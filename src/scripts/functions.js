@@ -19,12 +19,11 @@ function elementfactory(resultsArray, uniqueUL){
 
 // this works - we can toy with placement and potentially add a CSS class for green background
 const successAlert = () => {
+    const successTarget = document.querySelector(".success-msg")
     let paragraph = document.createElement('p')
     paragraph.innerText = "Your event was added!"
-    const successTarget = document.getElementById("success-container")
-    // successTarget.innerText = div
     successTarget.appendChild(paragraph)
     setTimeout(function(){
         successTarget.innerText = ''
-    }, 3000)
+    }, 2500)
 }
