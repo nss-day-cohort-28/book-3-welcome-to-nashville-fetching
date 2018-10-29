@@ -23,6 +23,7 @@ parksApi = {
       // run a forEach loop to print parks and put results into an object
       
       .then((printParks) => {
+        parkList = []
         printParks.forEach((park) => {
           let parkObj = {}
           parkObj.name = park.park_name
@@ -32,7 +33,6 @@ parksApi = {
         });
         
         // call element factory with the array that I've created but inside my then statement
-        let parkContainer = document.querySelector("#park-list")
         let uniqueUl =
         elementfactory(parkList, "park-ul");
         console.log(uniqueUl)

@@ -1,56 +1,61 @@
 * {
   margin: 0px;
   padding: 0px;
-  }
-  
-  header {
-    text-align: center;
-    top: 0px;
-  }
-  
-  h1 {
-   
-  }
-  
-  h2 {
-  
-  }
-  
-  p{
-  
-  } */
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-  }
-  
-  #landing {
+}
+
+body {
+  background-image: url(../images/nash_skyline.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+header {
   text-align: center;
-  }
-  
-  .landing {
-  
-  }
-  
-  .landing-buttons {
-  
-  } */
-  
-  .module {
-    /* height: 100vh; */
-    display: flex;
-    
-  }
-  
-  #itinerary {
-   background-color: aquamarine;
-   text-align: center;
-  }
-  
-  /* .itinerary-flex {
+  top: 0px;
+}
+
+h1 {}
+
+h2 {}
+
+p {}
+
+#container {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10vh auto;
+  width: 40vw;
+  background-color: rgb(224, 98, 98);
+  color: rgb(255, 250, 242);
+  padding: 40px;
+  opacity: .85;
+  font-weight: bold;
+}
+
+#landing {
+  padding: 10px;
+  text-align: center;
+}
+
+.landing {}
+
+.landing-buttons {}
+
+.module {
+  /* height: 100vh; */
+
+
+}
+
+#itinerary {
+  padding: 10px;
+  background-color: black;
+  opacity: .75;
+  text-align: center;
+}
+
+/* .itinerary-flex {
   
   }
   
@@ -61,27 +66,35 @@
   .result-list{
   
   } */
-  
-  #restaurants {
-  background-color: blueviolet;
+
+#restaurants {
+  padding: 10px;
+  background-color: black;
+  opacity: .75;
   text-align: center;
-  
-  }
-  
-  #parks {
-  background-color: coral;
+
+}
+
+#parks {
+  padding: 10px;
+  background-color: black;
+  opacity: .75;
   text-align: center;
-  
-  }
-  
-  #events {
-  background-color: teal;
+
+}
+
+#events {
+  padding: 10px;
+  background-color: black;
+  opacity: .75;
   text-align: center;
-  
-  }
-  
-  #concerts {
-  background-color: green;
+
+}
+
+#concerts {
+  padding: 10px;
+  background-color: black;
+  opacity: .75;
   text-align: center;
-  
-  }
+
+}

@@ -8,6 +8,10 @@ const eventsButton= document.getElementById("events-go")
 const concertsButton= document.getElementById("concerts-go")
 
 const restTarget = document.getElementById("restaurant-list");
+const parkContainer = document.querySelector("#park-list")
+const eventContainer= document.querySelector("#event-list")
+const itineraryResults = document.querySelector(".itinerary-list")
+
 
 restButton.addEventListener("click", () => {
     clearFunction(restTarget)
@@ -16,6 +20,7 @@ restButton.addEventListener("click", () => {
 })
 
 parksButton.addEventListener("click", () => {
+    clearFunction(parkContainer)
     let feature = (parksDropDown.value)
     console.log(parksDropDown.value)
     parksApi.fetchParks(feature)
@@ -23,12 +28,13 @@ parksButton.addEventListener("click", () => {
 
 
 eventsButton.addEventListener("click", () => {
+    clearFunction(eventContainer)
     const eventFilter = document.querySelector("#events-dropdown").value
     eventsApi.fetchEvents(eventFilter)
 })
 
 concertsButton.addEventListener("click", () => {
-    console.log (concertsDropDown.value)
+    clearFunction(concertContainer)
     concertInt = parseInt(concertsDropDown.value)
     songkickAPI.fetchConcerts(concertInt)
 })
@@ -68,3 +74,15 @@ restTarget.addEventListener("click", (event) => {
         console.log(event.target.innerText)
     }
 })
+
+// Park selection
+
+parkContainer.addEventListener("click", (event) => {
+    let br = document.createElement("br")
+    if (event.target && event.target.nodeName === "LI") {
+        console.log(event.target.innerText)
+        itineraryResults.append(`Park: ${event.target.innerText}`)
+        itineraryResults.appendChild(br)
+    }
+ })
+ 

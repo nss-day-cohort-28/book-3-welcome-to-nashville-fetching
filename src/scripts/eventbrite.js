@@ -33,16 +33,18 @@ eventsApi = {
                 }
                 // Array of events that cost money
                 for (i = 0; i < 5; i++) {
+                    shortMoney.splice(4)
                     shortMoney.push(moneyArray[i])
                     // console.log(moneyArray[i])
                 }
 
                 // Array of events that are free
                 for (i = 0; i < 5; i++) {
+                    shortFree.splice(4)
                     shortFree.push(freeArray[i])
                     // console.log(freeArray[i])
                 }
-               
+            //    calls spacific array to be created into a ul to be pushed into the DOM 
                 let uniqueUl;
                 if (eventFilter === "shortMoney") {
                     uniqueUl = elementfactory(shortMoney, "event-ul");
@@ -50,6 +52,14 @@ eventsApi = {
                     uniqueUl = elementfactory(shortFree, "event-ul");
                 }
                 document.querySelector("#event-list").appendChild(uniqueUl)
+
+                // function to clear the Arrays for each click
+                
             })
     }
 }
+
+
+
+
+// function to clear the Arrays that I for each load

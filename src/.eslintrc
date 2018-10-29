@@ -9,7 +9,7 @@
   "rules": {
       "semi": 0,
       "quotes": ["error", "double"],
-      "eqeqeq": 2,
+      "eqeqeq": 1,
       "no-trailing-spaces": 1
   }
 }
