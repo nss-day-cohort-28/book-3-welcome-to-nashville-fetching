@@ -15,6 +15,9 @@ const eventsItineraryResults= document.querySelector(".eventsItin")
 const concertsItineraryResults= document.querySelector(".concertsItin")
 const restItineraryResults= document.querySelector(".restItin")
 
+const saveButton = document.querySelector(".itinerary-button")
+const itineraryResults = document.querySelector(".itinerary-list")
+
 
 restButton.addEventListener("click", () => {
     clearFunction(restTarget)
@@ -48,24 +51,8 @@ const clearFunction = (divToClear) => {
     divToClear.innerHTML = ""
 }
 
-// target generate itinerary button
-genItin = document.getElementById("generate-itinerary")
 
-// add event listener to generate itinerary button
-genItin.addEventListener("click", () => {
 
-    console.log("generate itin button clicked")
-    // needed here:
-    // create element from itin (store it in database.json)
-    // then append to DOM
-})
-
-// Restaurant selection
-restTarget.addEventListener("click", (event) => {
-    if (event.target && event.target.nodeName === "LI") {
-        console.log(event.target.innerText)
-    }
-})
 
 // Park selection
 parkContainer.addEventListener("click", (event) => {
@@ -104,3 +91,13 @@ parkContainer.addEventListener("click", (event) => {
         restItineraryResults.append(`Restaurant: ${event.target.innerText}`)
     }
  })
+
+//  save itinerary button
+
+saveButton.addEventListener("click", (event) => {
+    createObjectPost(parksItineraryResults.innerText, restItineraryResults.innerText, eventsItineraryResults.innerText, concertsItineraryResults.innerText )
+    itineraryResults.innerHTML = ""
+})
+
+ 
+
